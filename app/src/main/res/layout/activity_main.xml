@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/selectUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/kevin"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Kevin" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/bing"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Bing" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/lester"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Lester" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/mj"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Mj" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/mac"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Mac" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/krissy"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Krissy" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/jester"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="jester" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/extra"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Extra" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/selectMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/pull"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Pull Data" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/work"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Do Work" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/push"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Push Data" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
