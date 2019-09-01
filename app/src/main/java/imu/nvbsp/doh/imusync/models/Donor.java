@@ -6,6 +6,7 @@ import io.realm.annotations.PrimaryKey;
 public class Donor extends RealmObject {
 
     @PrimaryKey
+    private String id;
     private String seqno;
     private String donor_photo;
     private String donor_id;
@@ -43,6 +44,14 @@ public class Donor extends RealmObject {
     private String created_dt;
     private String updated_by;
     private String updated_dt;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getSeqno() {
         return seqno;
