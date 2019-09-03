@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.pull).setOnClickListener(this);
         findViewById(R.id.work).setOnClickListener(this);
         findViewById(R.id.push).setOnClickListener(this);
-
+        findViewById(R.id.review).setOnClickListener(this);
 
 
 
@@ -141,6 +141,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 findViewById(R.id.push).setEnabled(false);
                 pushData();
                 break;
+            case R.id.review:
+                Intent review = new Intent(this,ReviewResolved.class);
+                startActivity(review);
+                break;
         }
     }
 
@@ -163,12 +167,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onResponse(Call<PushResponse> call, Response<PushResponse> response) {
 //                Gson gson = new Gson();
 //                userName.setText(gson.toJson(response.body()));
-                PushResponse pushResponse = response.body();
-                if(pushResponse.getStatus().equals("ok")){
-                    findViewById(R.id.push).setEnabled(false);
-                    Session.set(MainActivity.this,"push","Y");
-                    Toast.makeText(MainActivity.this, "Upload succesful..", Toast.LENGTH_LONG).show();
+                try{
+                    PushResponse pushResponse = response.body();
+                    if(pushResponse.getStatus().equals("ok")){
+                        findViewById(R.id.push).setEnabled(false);
+                        Session.set(MainActivity.this,"push","Y");
+                        Toast.makeText(MainActivity.this, "Upload succesful..", Toast.LENGTH_LONG).show();
+                    }
+                }catch (Exception e){
+                    Toast.makeText(MainActivity.this, "Upload failed, consult kevin for reason!", Toast.LENGTH_LONG).show();
                 }
+                
             }
 
             @Override
@@ -222,6 +231,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void pullData() {
+        Toast.makeText(this, "Downloading data..", Toast.LENGTH_SHORT).show();
         String user_id = Session.get(this,"user_id",null);
         Call<PullResponse> response = api.pull(user_id);
         response.enqueue(new Callback<PullResponse>() {

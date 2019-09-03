@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Session {
 
-    public static String URL = "http://192.168.43.98/imusync/public/api/";
+    public static String URL = "http://10.100.100.12/imusync/public/api/";
 
     public static ApiRequest getApiInstance(){
         Retrofit retrofit = new Retrofit.Builder()

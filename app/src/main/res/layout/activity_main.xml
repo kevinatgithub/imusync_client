@@ -111,6 +111,12 @@
                 android:text="Do Work" />
 
             <android.support.design.button.MaterialButton
+                android:id="@+id/review"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Review" />
+
+            <android.support.design.button.MaterialButton
                 android:id="@+id/push"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
